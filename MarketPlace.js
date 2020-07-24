@@ -13,9 +13,6 @@ class MarketPlace extends Component {
 			id: false
 
 		};
-
-
-
 	}
 
 	async getData(props) {
@@ -51,24 +48,17 @@ class MarketPlace extends Component {
 				return <MiniCard email={item.email} url1={item.url1} url2={item.url2} description={item.description} price={item.price} />
 			})
 			return (
-
 				<div>
 					<CardColumns style={{ width: '50rem', height:'60rem' }}>
-
-
 						{itemList}
-
-
 					</CardColumns>
 				</div>
-
 			);
 		}
 		return (
 			<p> List appears to be empty...</p>
 
 		);
-
 	}
 }
 
