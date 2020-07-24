@@ -29,9 +29,6 @@ const SellItem = (props) => {
 		setLocation(e.target.value);
 	};
 
-
-
-
 	const onSubmit = async e => {
 		e.preventDefault();
 		
