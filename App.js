@@ -15,13 +15,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 var firebaseConfig = {
-	apiKey: "AIzaSyCURiqUlB72Hy89q-Wp2xPTM0qF0I3tH94",
-	authDomain: "easymate-275907.firebaseapp.com",
-	databaseURL: "https://easymate-275907.firebaseio.com",
-	projectId: "easymate-275907",
-	storageBucket: "easymate-275907.appspot.com",
-	messagingSenderId: "741610931944",
-	appId: "1:741610931944:web:a1aefb9e77b8d1bc15ab5d"
+	/** enter config*//
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
