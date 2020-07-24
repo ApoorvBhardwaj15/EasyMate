@@ -10,19 +10,11 @@ import firebase from 'firebase/app';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import  "./Login.css";
 
-
-
-
 class Login extends Component {
-
-	
-
 
 render() {
 	return (
-		<div >
-       
-        
+		<div >   
         {this.state.isSignedIn !== undefined && !this.state.isSignedIn &&
           <div>
           	
