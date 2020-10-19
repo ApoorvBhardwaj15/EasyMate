@@ -11,7 +11,6 @@ class MarketPlace extends Component {
 		this.state = {
 			items: [],
 			id: false
-
 		};
 	}
 
@@ -23,10 +22,8 @@ class MarketPlace extends Component {
 					'Accept': 'application/json',
 					'Content-Type': 'application/json'
 				},
-
 				//make sure to serialize your JSON body
 				body: JSON.stringify({
-
 					email: this.props.email
 				})
 			}).then((response) => response.json())
@@ -35,7 +32,6 @@ class MarketPlace extends Component {
 						items: response,
 						id: true
 					});
-
 				});
 		}
 	}
