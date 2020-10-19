@@ -4,7 +4,6 @@ import SellItem from './SellItem.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import * as firebase from "firebase/app";
-
 import MarketPlace from './MarketPlace';
 //import Login from './Login';
 // Add the Firebase services that you want to use
@@ -21,7 +20,6 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 var user = firebase.auth().currentUser;
 
-
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -29,7 +27,6 @@ class App extends Component {
 			isSignedIn: undefined,
 			name: null,
 			email: null
-
 		}
 		this.componentDidMount = this.componentDidMount.bind(this)
 	}
@@ -42,11 +39,9 @@ class App extends Component {
 			firebase.auth.EmailAuthProvider.PROVIDER_ID,
 			firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 			firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-
 		],
 		// Terms of service url.
 		signInSuccessUrl: './home'
-
 	};
 
 	componentDidMount() {
@@ -55,19 +50,14 @@ class App extends Component {
 				isSignedIn: !!user,
 				name: user.displayName,
 				email: user.email
-
 			});
 		});
-
 	}
+
 	componentWillUnmount() {
 		this.unregisterAuthObserver();
 	}
 	render() {
-
-
-
-
 		return (
 			<Router>
 				<Navbar fixed="top" bg="light" expand="lg">
@@ -91,7 +81,6 @@ class App extends Component {
 				{/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
 				<Switch>
-
 					<Route path="/my_listings">
 						<Cards name={this.state.name} email={this.state.email} />
 					</Route>
@@ -110,18 +99,12 @@ class App extends Component {
 						<h1> Welcome to EazyMate mate!</h1>
 						<p>Buying and Selling has never been this easy!  Create an account to join our community</p>
 						<StyledFirebaseAuth uiConfig={this.uiConfig}
-							firebaseAuth={firebaseApp.auth()} />
-						
+							firebaseAuth={firebaseApp.auth()} />						
 					</Route>
 				</Switch>
-
 			</Router >
 		);
-
 	}
-
-
-
 }
 
 export default App;
